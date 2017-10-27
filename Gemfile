@@ -77,3 +77,8 @@ gem 'hirb'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
+
+# gem 'bootstrap', '~> 4.0.0.beta2'
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
+gem 'bourbon' # mixin library for Sass, for ajax login modal.

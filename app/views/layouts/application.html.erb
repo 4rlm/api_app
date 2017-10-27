@@ -4,11 +4,36 @@
     <title>ApiApp</title>
     <%= csrf_meta_tags %>
 
+    <!-- ADD THIS LINK TO CDN: -->
+    <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/css/bootstrap-select.min.css"> -->
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%#= stylesheet_link_tag 'style' %>
+    <%#= stylesheet_link_tag 'modal/css/style', 'data-turbolinks-track': 'reload' %>
+    <%#= stylesheet_link_tag "modal/css/style", media: "all", "data-turbolinks-track" => false %>
+    <%#= stylesheet_link_tag "modal/css/style" %>
+
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+
+    <%# if user_signed_in? %>
+      <%= render partial: 'layouts/nav' %>
+    <%# end %>
+
+    <div class="container-fluid outer-container">
+      <%= render partial: 'layouts/flash' %>
+      <%= yield %>
+    </div>
+
+    <%#= javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/js/bootstrap-select.min.js" %>
+
   </body>
+
+  <!-- Footer -->
+  <div class="footer text-center">
+    <h4>Developed by The Austonites &copy 2017</h4>
+  </div>
+
 </html>
